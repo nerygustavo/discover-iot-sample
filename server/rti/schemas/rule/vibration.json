@@ -1,0 +1,9 @@
+{
+	"name": "Smartphone Vibration",
+	"description": "Abnormal smartphone vibration when exceeeding 15",
+	"disabled": false,
+	"severity": 4,
+	"schemaId": "",
+	"condition": ".ax  >= 50.0",
+	"actions": []
+}

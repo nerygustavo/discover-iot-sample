@@ -1,0 +1,8 @@
+{
+	"name": "DTB IntelEdison",
+	"format": "JSON",
+	"items": [{
+		"name": "Volts",
+		"type": "float"
+	}]
+}

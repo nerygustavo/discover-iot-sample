@@ -1,0 +1,26 @@
+{
+	"name": "DTB Smartphone",
+	"format": "JSON",
+	"items": [{
+		"name": "ax",
+		"type": "float"
+	}, {
+		"name": "ay",
+		"type": "float"
+	}, {
+		"name": "az",
+		"type": "float"
+	}, {
+		"name": "ob",
+		"type": "float"
+	}, {
+		"name": "og",
+		"type": "float"
+	}, {
+		"name": "oa",
+		"type": "float"
+	}, {
+		"name": "accelMag",
+		"type": "float"
+	}]
+}

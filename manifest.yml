@@ -1,6 +1,7 @@
 applications:
 - services:
   - discover-iot-try-service
+  - discover-rti-try-service
   host: discover-iot-try
   name: discover-iot-try
   disk: 128M

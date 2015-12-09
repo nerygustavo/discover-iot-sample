@@ -1,0 +1,11 @@
+{
+	"type": "webhook",
+	"name": "[webhook] Play Experience",
+	"description": "webhook integration action",
+	"fields": {
+		"url": "",
+		"method": "POST",
+		"contentType": "application/json",
+		"body": "{\"timestamp\":\"{{timestamp}}\", \"tenantId\":\"{{tenantId}}\", \"deviceId\":\"{{deviceId}}\", \"ruleName\":\"{{ruleName}}\", \"ruleDescription\":\"{{ruleDescription}}\", \"ruleCondition\":\"{{ruleCondition}}\", \"message\":\"{{message}}\"}"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"name": "DTB IntelGalileo",
+	"format": "JSON",
+	"items": [{
+		"name": "cputemp",
+		"type": "float"
+	}]
+}

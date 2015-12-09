@@ -1,0 +1,8 @@
+{
+	"name": "DTB Arduino",
+	"format": "JSON",
+	"items": [{
+		"name": "temperature",
+		"type": "float"
+	}]
+}

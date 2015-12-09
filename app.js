@@ -22,7 +22,8 @@ if (process.env.VCAP_SERVICES) {
 			credentials = iotService[index].credentials;
 		}
 	}
-} else {
+}
+else {
 	console.log("ERROR: IoT Service was not bound!");
 }
 
@@ -36,7 +37,7 @@ var options = {
 	host: 'internetofthings.ibmcloud.com',
 	port: 443,
 	headers: {
-	  'Content-Type': 'application/json'
+		'Content-Type': 'application/json'
 	},
 	auth: basicConfig.apiKey + ':' + basicConfig.apiToken
 };
@@ -50,7 +51,7 @@ app.get('/iotServiceLink', function(req, res) {
 		host: basicConfig.org + '.internetofthings.ibmcloud.com',
 		port: 443,
 		headers: {
-		  'Content-Type': 'application/json'
+			'Content-Type': 'application/json'
 		},
 		auth: basicConfig.apiKey + ':' + basicConfig.apiToken,
 		method: 'GET',
@@ -65,26 +66,42 @@ app.get('/iotServiceLink', function(req, res) {
 			try {
 				var org = JSON.parse(str);
 				var url = "https://console.ng.bluemix.net/#/resources/serviceGuid=" + org.bluemix.serviceInstanceGuid + "&orgGuid=" + org.bluemix.organizationGuid + "&spaceGuid=" + org.bluemix.spaceGuid;
-				res.json({ url: url });
-			} catch (e) { console.log("Something went wrong...", str); res.send(500); }
+				res.json({
+					url: url
+				});
+			}
+			catch (e) {
+				console.log("Something went wrong...", str);
+				res.send(500);
+			}
 			console.log("iotServiceLink end: ", str.toString());
 		});
-	}).on('error', function(e) { console.log("ERROR", e); });
+	}).on('error', function(e) {
+		console.log("ERROR", e);
+	});
 	org_req.end();
 });
 
 app.post('/registerDevice', function(req, res) {
 	console.log(req.body);
-	var deviceId = null, typeId = "iot-phone", password = null;
-	if (req.body.deviceId) { deviceId = req.body.deviceId; }
-	if (req.body.typeId) { typeId = req.body.typeId; }
-	if (req.body.password) { password = req.body.password; }
+	var deviceId = null,
+		typeId = "iot-phone",
+		password = null;
+	if (req.body.deviceId) {
+		deviceId = req.body.deviceId;
+	}
+	if (req.body.typeId) {
+		typeId = req.body.typeId;
+	}
+	if (req.body.password) {
+		password = req.body.password;
+	}
 
 	var options = {
 		host: basicConfig.org + '.internetofthings.ibmcloud.com',
 		port: 443,
 		headers: {
-		  'Content-Type': 'application/json'
+			'Content-Type': 'application/json'
 		},
 		auth: basicConfig.apiKey + ':' + basicConfig.apiToken,
 		method: 'POST',
@@ -107,12 +124,12 @@ app.post('/registerDevice', function(req, res) {
 				host: basicConfig.org + '.internetofthings.ibmcloud.com',
 				port: 443,
 				headers: {
-				  'Content-Type': 'application/json'
+					'Content-Type': 'application/json'
 				},
 				auth: basicConfig.apiKey + ':' + basicConfig.apiToken,
 				method: 'POST',
-				path: 'api/v0002/device/types/'+typeId+'/devices'
-			}
+				path: 'api/v0002/device/types/' + typeId + '/devices'
+			};
 
 			var deviceDetails = {
 				deviceId: deviceId,
@@ -127,17 +144,29 @@ app.post('/registerDevice', function(req, res) {
 				});
 				dev_res.on('end', function() {
 					console.log("createDevice end: ", str.toString());
-					res.send({ result: "Success!" });
+					res.send({
+						result: "Success!"
+					});
 				});
-			}).on('error', function(e) { console.log("ERROR", e); });
+			}).on('error', function(e) {
+				console.log("ERROR", e);
+			});
 			dev_req.write(JSON.stringify(deviceDetails));
 			dev_req.end();
 		});
-	}).on('error', function(e) { console.log("ERROR", e); });
+	}).on('error', function(e) {
+		console.log("ERROR", e);
+	});
 	type_req.write(JSON.stringify(deviceTypeDetails));
 	type_req.end();
 });
 
 app.listen(appEnv.port, function() {
 	console.log("server starting on " + appEnv.url);
+});
+
+var rtiUtil = require('./server/rti/provider/util');
+rtiUtil.loadPlayExperience().then(function(result) {
+	console.log('>>> play experience objects created:');
+	console.log(result);
 });

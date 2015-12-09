@@ -1,0 +1,23 @@
+{
+	"name": "DTB ArmMbed",
+	"format": "JSON",
+	"items": [{
+		"name": "accelX",
+		"type": "float"
+	}, {
+		"name": "accelY",
+		"type": "float"
+	}, {
+		"name": "accelZ",
+		"type": "float"
+	}, {
+		"name": "temp",
+		"type": "float"
+	}, {
+		"name": "potentiometer1",
+		"type": "float"
+	}, {
+		"name": "potentiometer2",
+		"type": "float"
+	}]
+}
