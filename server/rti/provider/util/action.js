@@ -1,10 +1,9 @@
-/* globals module, require */
+/* globals module, require, process */
 
 'use strict';
 
 (function() {
 	var requireDir = require('require-dir');
-	var config = require('config');
 
 	var api = require('../base/provider');
 	var files = requireDir('../../schemas/action');
@@ -38,7 +37,8 @@
 			}
 
 			if (!found) {
-				webhook.fields.url = config.get('url') + '/rti/alert';
+				var url = JSON.parse(process.env.VCAP_APPLICATION).application_uris[0];
+				webhook.fields.url = 'http://' + url + '/rti/alert';
 				return createAction(webhook);
 			}
 			else {

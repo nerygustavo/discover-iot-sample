@@ -11,6 +11,7 @@
 	var credentials = VCAP['IoT Real-Time Insight'][0].credentials;
 	var user = credentials.apiKey;
 	var password = credentials.authToken;
+	credentials.baseUrl = credentials.baseUrl + '/v2';
 
 	var getPromise = function(path) {
 		console.log('calling api to GET: ' + path);
@@ -27,6 +28,10 @@
 			.on('end', function() {
 				var json = JSON.parse(body);
 				defer.resolve(json);
+			})
+			.on('error', function(error) {
+				console.error(error);
+				defer.reject({});
 			});
 
 		return defer.promise;
@@ -51,6 +56,10 @@
 			.on('end', function() {
 				var json = JSON.parse(body);
 				defer.resolve(json);
+			})
+			.on('error', function(error) {
+				console.error(error);
+				defer.reject({});
 			});
 
 		return defer.promise;
@@ -67,6 +76,10 @@
 			.auth(user, password, true)
 			.on('end', function() {
 				defer.resolve();
+			})
+			.on('error', function(error) {
+				console.error(error);
+				defer.reject({});
 			});
 
 		return defer.promise;
