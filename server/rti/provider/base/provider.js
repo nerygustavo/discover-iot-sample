@@ -11,7 +11,7 @@
 	var credentials = VCAP['IoT Real-Time Insight'][0].credentials;
 	var user = credentials.apiKey;
 	var password = credentials.authToken;
-	credentials.baseUrl = credentials.baseUrl + '/v2';
+	credentials.baseUrl = credentials.baseUrl;
 
 	var getPromise = function(path) {
 		console.log('calling api to GET: ' + path);
