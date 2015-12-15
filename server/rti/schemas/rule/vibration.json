@@ -4,6 +4,6 @@
 	"disabled": false,
 	"severity": 4,
 	"schemaId": "",
-	"condition": ".ax >= 50.0 and .ay >= 50 and .az > =50",
+	"condition": ".ax >= 50.0",
 	"actions": []
 }
