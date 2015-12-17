@@ -33,6 +33,15 @@
 					<li>Deploy and bind the <a href="https://console.ng.bluemix.net/catalog/iot-real-time-insights">IoT Real-Time Insights service</a> to create custom dashboards and real-time data alerts</li>
 				</ol>
 			</div>
+
+			<div class="step">
+				<h2>Vibrate your smartphone and take a look at the alerts coming in.</h2>
+				<h3>Last Alert:</h3>
+				<pre id="lastAlert"></pre>
+
+				<div id="historicAlerts">
+					<h3>Historic Alerts:</h3>
+				</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -51,5 +60,7 @@
 			}
 		});
 	</script>
+	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+	<script type="text/javascript" src="js/socket.js"></script>
 </body>
 </html>

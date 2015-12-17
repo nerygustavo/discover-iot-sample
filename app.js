@@ -9,6 +9,11 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json()); // for parsing application/json
 var appEnv = cfenv.getAppEnv();
 
+// alert routes for alerts and socket
+var server = require('http').Server(app);
+var alertRoute = require('./server/routes/rti')(server);
+app.use('/rti', alertRoute);
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 var config = null;
@@ -161,8 +166,13 @@ app.post('/registerDevice', function(req, res) {
 	type_req.end();
 });
 
-app.listen(appEnv.port, function() {
-	console.log("server starting on " + appEnv.url);
+// app.listen(appEnv.port, function() {
+// 	console.log("server starting on url:" + appEnv.url);
+// 	console.log("server starting on port:" + appEnv.port);
+// });
+
+server.listen(appEnv.port, function() {
+	console.log("server starting on url:" + appEnv.url);
 });
 
 var rtiUtil = require('./server/rti/provider/util');
