@@ -2,7 +2,11 @@
 	"name": "DTB IntelEdison",
 	"format": "JSON",
 	"items": [{
-		"name": "Volts",
-		"type": "float"
+		"name": "d",
+		"type": "struct",
+		"subItems": [{
+			"name": "Volts",
+			"type": "float"
+		}]
 	}]
 }

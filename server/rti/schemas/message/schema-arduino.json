@@ -2,7 +2,11 @@
 	"name": "DTB Arduino",
 	"format": "JSON",
 	"items": [{
-		"name": "temperature",
-		"type": "float"
+		"name": "d",
+		"type": "struct",
+		"subItems": [{
+			"name": "temperature",
+			"type": "float"
+		}]
 	}]
 }

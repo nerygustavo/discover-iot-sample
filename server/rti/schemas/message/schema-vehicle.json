@@ -2,44 +2,48 @@
 	"name": "DTB Vehicle",
 	"format": "JSON",
 	"items": [{
-		"name": "id",
-		"type": "string"
-	}, {
-		"name": "name",
-		"type": "string"
-	}, {
-		"name": "longitude",
-		"type": "string"
-	}, {
-		"name": "latitude",
-		"type": "string"
-	}, {
-		"name": "heading",
-		"type": "float"
-	}, {
-		"name": "speed",
-		"type": "int"
-	}, {
-		"name": "oilpressure",
-		"type": "int"
-	}, {
-		"name": "enginetemp",
-		"type": "int"
-	}, {
-		"name": "state",
-		"type": "int"
-	}, {
-		"name": "description",
-		"type": "string"
-	}, {
-		"name": "type",
-		"type": "string"
-	}, {
-		"name": "customProps",
+		"name": "d",
 		"type": "struct",
 		"subItems": [{
-			"name": "turnSignal",
+			"name": "id",
 			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "longitude",
+			"type": "string"
+		}, {
+			"name": "latitude",
+			"type": "string"
+		}, {
+			"name": "heading",
+			"type": "float"
+		}, {
+			"name": "speed",
+			"type": "int"
+		}, {
+			"name": "oilpressure",
+			"type": "int"
+		}, {
+			"name": "enginetemp",
+			"type": "int"
+		}, {
+			"name": "state",
+			"type": "int"
+		}, {
+			"name": "description",
+			"type": "string"
+		}, {
+			"name": "type",
+			"type": "string"
+		}, {
+			"name": "customProps",
+			"type": "struct",
+			"subItems": [{
+				"name": "turnSignal",
+				"type": "string"
+			}]
 		}]
 	}]
 }

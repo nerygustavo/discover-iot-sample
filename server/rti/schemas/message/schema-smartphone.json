@@ -22,9 +22,6 @@
 		}, {
 			"name": "oa",
 			"type": "float"
-		}, {
-			"name": "accelMag",
-			"type": "float"
 		}]
 	}]
 }

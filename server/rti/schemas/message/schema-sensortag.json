@@ -1,158 +1,160 @@
 {
 	"name": "DTB SensorTag",
 	"format": "JSON",
-	"items": [
+	"items": [{
+		"name": "d",
+		"type": "struct",
+		"subItems": [{
+				"name": "ambient_temp",
+				"type": "float"
+			}, {
+				"name": "AmbTemp",
+				"type": "float"
+			}, {
+				"name": "ambientTemp",
+				"type": "float"
+			},
 
-		{
-			"name": "ambient_temp",
-			"type": "float"
-		}, {
-			"name": "AmbTemp",
-			"type": "float"
-		}, {
-			"name": "ambientTemp",
-			"type": "float"
-		},
+			{
+				"name": "humidity",
+				"type": "float"
+			},
 
-		{
-			"name": "humidity",
-			"type": "float"
-		},
-
-		{
-			"name": "acc_x",
-			"type": "float"
-		}, {
-			"name": "accX",
-			"type": "float"
-		}, {
-			"name": "accelX",
-			"type": "float"
-		},
-
-
-		{
-			"name": "acc_y",
-			"type": "float"
-		}, {
-			"name": "accY",
-			"type": "float"
-		}, {
-			"name": "accelY",
-			"type": "float"
-		},
+			{
+				"name": "acc_x",
+				"type": "float"
+			}, {
+				"name": "accX",
+				"type": "float"
+			}, {
+				"name": "accelX",
+				"type": "float"
+			},
 
 
-		{
-			"name": "acc_z",
-			"type": "float"
-		}, {
-			"name": "accZ",
-			"type": "float"
-		}, {
-			"name": "accelZ",
-			"type": "float"
-		},
+			{
+				"name": "acc_y",
+				"type": "float"
+			}, {
+				"name": "accY",
+				"type": "float"
+			}, {
+				"name": "accelY",
+				"type": "float"
+			},
 
 
-		{
-			"name": "magX",
-			"type": "float"
-		}, {
-			"name": "compass_x",
-			"type": "float"
-		},
+			{
+				"name": "acc_z",
+				"type": "float"
+			}, {
+				"name": "accZ",
+				"type": "float"
+			}, {
+				"name": "accelZ",
+				"type": "float"
+			},
 
 
-		{
-			"name": "magY",
-			"type": "float"
-		}, {
-			"name": "compass_y",
-			"type": "float"
-		},
+			{
+				"name": "magX",
+				"type": "float"
+			}, {
+				"name": "compass_x",
+				"type": "float"
+			},
 
 
-		{
-			"name": "magZ",
-			"type": "float"
-		}, {
-			"name": "compass_z",
-			"type": "float"
-		},
+			{
+				"name": "magY",
+				"type": "float"
+			}, {
+				"name": "compass_y",
+				"type": "float"
+			},
 
 
-		{
-			"name": "gyroX",
-			"type": "float"
-		}, {
-			"name": "gyro_x",
-			"type": "float"
-		},
+			{
+				"name": "magZ",
+				"type": "float"
+			}, {
+				"name": "compass_z",
+				"type": "float"
+			},
 
 
-		{
-			"name": "gyroY",
-			"type": "float"
-		}, {
-			"name": "gyro_y",
-			"type": "float"
-		},
+			{
+				"name": "gyroX",
+				"type": "float"
+			}, {
+				"name": "gyro_x",
+				"type": "float"
+			},
 
 
-		{
-			"name": "gyroZ",
-			"type": "float"
-		}, {
-			"name": "gyro_z",
-			"type": "float"
-		},
-
-		{
-			"name": "air_pressure",
-			"type": "float"
-		}, {
-			"name": "pressure",
-			"type": "float"
-		},
+			{
+				"name": "gyroY",
+				"type": "float"
+			}, {
+				"name": "gyro_y",
+				"type": "float"
+			},
 
 
-		{
-			"name": "object_temp",
-			"type": "float"
-		}, {
-			"name": "IRTemp",
-			"type": "float"
-		}, {
-			"name": "objectTemp",
-			"type": "float"
-		},
+			{
+				"name": "gyroZ",
+				"type": "float"
+			}, {
+				"name": "gyro_z",
+				"type": "float"
+			},
+
+			{
+				"name": "air_pressure",
+				"type": "float"
+			}, {
+				"name": "pressure",
+				"type": "float"
+			},
 
 
-		{
-			"name": "key_1",
-			"type": "float"
-		}, {
-			"name": "key1",
-			"type": "float"
-		},
+			{
+				"name": "object_temp",
+				"type": "float"
+			}, {
+				"name": "IRTemp",
+				"type": "float"
+			}, {
+				"name": "objectTemp",
+				"type": "float"
+			},
 
 
-		{
-			"name": "key_2",
-			"type": "float"
-		}, {
-			"name": "key2",
-			"type": "float"
-		},
+			{
+				"name": "key_1",
+				"type": "float"
+			}, {
+				"name": "key1",
+				"type": "float"
+			},
 
 
-		{
-			"name": "light",
-			"type": "float"
-		}, {
-			"name": "optical",
-			"type": "float"
-		}
-	]
+			{
+				"name": "key_2",
+				"type": "float"
+			}, {
+				"name": "key2",
+				"type": "float"
+			},
+
+
+			{
+				"name": "light",
+				"type": "float"
+			}, {
+				"name": "optical",
+				"type": "float"
+			}
+		]
+	}]
 }

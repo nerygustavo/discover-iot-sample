@@ -2,13 +2,17 @@
 	"name": "DTB RaspberryPi",
 	"format": "JSON",
 	"items": [{
-		"name": "cputemp",
-		"type": "float"
-	}, {
-		"name": "cpuload",
-		"type": "float"
-	}, {
-		"name": "sine",
-		"type": "float"
+		"name": "d",
+		"type": "struct",
+		"subItems": [{
+			"name": "cputemp",
+			"type": "float"
+		}, {
+			"name": "cpuload",
+			"type": "float"
+		}, {
+			"name": "sine",
+			"type": "float"
+		}]
 	}]
 }
